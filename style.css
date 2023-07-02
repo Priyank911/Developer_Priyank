@@ -416,11 +416,12 @@ font-weight: var(--font-medium);
 
 
 
-
-.container1 {
+.container_Form {
   max-width: 600px;
   margin: 0 auto;
   padding: 20px;
+  margin-left: 1cm;
+  margin-right: 1cm;
 }
 
 h2 {
@@ -477,4 +478,9 @@ input[type="text"]:focus,
 input[type="email"]:focus,
 textarea:focus {
   border-color: #4CAF50;
+}
+
+/* Add space after the submit button */
+button {
+  margin-bottom: 4cm;
 }

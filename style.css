@@ -420,8 +420,8 @@ font-weight: var(--font-medium);
   max-width: 600px;
   margin: 0 auto;
   padding: 20px;
-  margin-left: 0.05m;
-  margin-right: 0.05cm;
+  margin-left: 0.5px;
+  margin-right: 0.5px;
 }
 
 h2 {

@@ -165,10 +165,84 @@
                 </div>
             </section>
 
-            <!--=============== SKILLS ===============-->
-            <section class="skills section" id="skills">
-                
-            </section>
+            <!--=============== Pop-upo ===============-->
+            <style>
+        /* Styles for the pop-up */
+        .popup {
+            display: none;
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 90%;
+            max-width: 300px;
+            height: 200px;
+            border: 1px solid #ccc;
+            padding: 20px;
+            z-index: 9999;
+            background-color: #0b111e;
+            border-radius: 25px;
+        }
+        .popup h2 {
+            margin-top: 0;
+            color: white;
+        }
+        .popup p{
+            color: white;
+        }
+        .popup .close {
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            cursor: pointer;
+            color: white;
+        }
+
+        /* Adjustments for mobile view */
+        @media (max-width: 480px) {
+            .popup {
+                width: 90%;
+                max-width: 280px;
+                height: auto;
+                padding: 10px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <a href="#" id="popup-link">Open Pop-up Page</a>
+
+    <div id="popup" class="popup">
+        <h2>Latest Update:-</h2>
+        <p>1. Tutorial:-2 (..Maths..)</p>
+        <br>
+        <p>2. Reference book for Java 6th edition, Including JDK 7 as well.📚✨</p>
+        <span class="close">Close</span>
+    </div>
+
+    <script>
+        // JavaScript code to handle the click event and show/hide the pop-up
+        const link = document.getElementById('popup-link');
+        const popup = document.getElementById('popup');
+        const close = document.querySelector('.close');
+
+        function showPopup() {
+            popup.style.display = 'block'; // Show the pop-up
+            link.style.display = 'none'; // Hide the link
+        }
+
+        link.addEventListener('click', function(e) {
+            e.preventDefault(); // Prevent the link from navigating to a different page
+            showPopup();
+        });
+
+        close.addEventListener('click', function() {
+            popup.style.display = 'none'; // Hide the pop-up
+        });
+
+        // Automatically open the popup on page load
+        window.addEventListener('load', showPopup);
+    </script>
 
             <!--=============== SERVICES ===============-->
             <section class="services section">

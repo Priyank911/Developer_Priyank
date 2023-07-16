@@ -95,7 +95,7 @@
   <div class="container">
      <h1 class="header1">Select Subject for Notes.</h1>
     <a class="btn" href="https://i.postimg.cc/c4VjMYw8/coming-soon.jpg" target="_blank">Maths</a>
-    <a class="btn" href="https://i.postimg.cc/c4VjMYw8/coming-soon.jpg" target="_blank">OppS</a>
+    <a class="btn" href="https://drive.google.com/file/d/137nBrvzwl3RVrXHVK7T5qtPdA7zZzGCu/view?usp=sharing" id="popup-link">OppS</a>
      <a class="btn" href="https://i.postimg.cc/c4VjMYw8/coming-soon.jpg" target="_blank">DBMS</a>
     <a class="btn" href="https://i.postimg.cc/c4VjMYw8/coming-soon.jpg" target="_blank">DSA</a>
   </div>
@@ -104,5 +104,75 @@
                     </div>
                 </div>
             </section>
+
+<style>
+        /* Styles for the pop-up */
+        .popup {
+            display: none;
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 90%;
+            max-width: 300px;
+            height: 200px;
+            border: 1px solid #ccc;
+            padding: 20px;
+            z-index: 9999;
+          background-color: #0b111e;
+          border-radius: 25px;
+        }
+        .popup h2 {
+            margin-top: 0;
+          color: white;
+        }
+      .popup p{
+        color: white;
+      }
+        .popup .close {
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            cursor: pointer;
+          color: white;
+        }
+        
+        /* Adjustments for mobile view */
+        @media (max-width: 480px) {
+            .popup {
+                width: 90%;
+                max-width: 280px;
+                height: auto;
+                padding: 10px;
+            }
+        }
+    </style>
+    <div id="popup" class="popup">
+        <h2>Important Note</h2>
+      <br>
+      <p>"I have uploaded the reference book for Java 6th edition, including JDK 7 as well. 📚✨"</p>
+        <span class="close">Close</span>
+    </div>
+
+    <script>
+        // JavaScript code to handle the click event and show/hide the pop-up
+        const link = document.getElementById('popup-link');
+        const popup = document.getElementById('popup');
+        const close = document.querySelector('.close');
+
+        link.addEventListener('click', function(e) {
+            e.preventDefault(); // Prevent the default navigation behavior
+
+            // Show the pop-up
+            popup.style.display = 'block';
+        });
+
+        close.addEventListener('click', function() {
+            popup.style.display = 'none'; // Hide the pop-up
+            window.location.href = link.href; // Navigate to the link's href
+        });
+    </script>
+
+            
     </body>
 </html>
